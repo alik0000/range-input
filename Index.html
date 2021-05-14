@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Css link-->
+    <link type="text/css" rel="stylesheet" href="css.css">
+    <title>Task 1</title>
+</head>
+<body>
+
+<div class="container" id="app">
+    <p class="rangeValue" :style="colors()"> {{ value + '%' }} </p>
+    <label for="RangeInput"></label>
+    <input @change="colors()" v-model="value" type="range" class="mySlider" min="0" max="100" :title="value+'%'" id="RangeInput">
+    <div class="buttons">
+        <button @click="per25">25%</button>
+        <button @click="per50">50%</button>
+        <button @click="per75">75%</button>
+        <button @click="per100">100%</button>
+    </div>
+
+
+</div>
+<!--Vue-js-->
+<script src="https://unpkg.com/vue@next"></script>
+<!-- JavaScript-->
+<script src="app.js"></script>
+</body>
+</html>
